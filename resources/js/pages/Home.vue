@@ -7,6 +7,9 @@
         <span v-show="cafesLoadStatus == 1">Loading</span>
         <span v-show="cafesLoadStatus == 2">Cafes loaded successfully!</span>
         <span v-show="cafesLoadStatus == 3">Cafes loaded unsuccessfully!</span>
+        <ul v-for="(cafe, key) in cafes">
+            <router-link :to="{ name: 'cafe', params: {id:cafe.id}}">{{cafe.name}}</router-link>
+        </ul>
     </div>
 </template>
 

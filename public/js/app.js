@@ -55960,24 +55960,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     // 定义组件的计算属性
-    computed: {
-        // 从 Vuex 中获取用户加载状态
-        //            userLoadStatus(){
-        //                return this.$store.getters.getUserLoadStatus;
-        //            },
-
-        // 从 Vuex 中获取用户信息
-        //            user(){
-        //                return this.$store.getters.getUser;
-        //            }
-    }
+    computed: {}
 });
 
 /***/ }),
@@ -56006,9 +55992,7 @@ var render = function() {
           ],
           1
         )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "right" })
+      ])
     ],
     1
   )
@@ -56157,6 +56141,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     created: function created() {
@@ -56188,52 +56175,71 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "home" } }, [
-    _c(
-      "span",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.cafesLoadStatus == 1,
-            expression: "cafesLoadStatus == 1"
-          }
-        ]
-      },
-      [_vm._v("Loading")]
-    ),
-    _vm._v(" "),
-    _c(
-      "span",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.cafesLoadStatus == 2,
-            expression: "cafesLoadStatus == 2"
-          }
-        ]
-      },
-      [_vm._v("Cafes loaded successfully!")]
-    ),
-    _vm._v(" "),
-    _c(
-      "span",
-      {
-        directives: [
-          {
-            name: "show",
-            rawName: "v-show",
-            value: _vm.cafesLoadStatus == 3,
-            expression: "cafesLoadStatus == 3"
-          }
-        ]
-      },
-      [_vm._v("Cafes loaded unsuccessfully!")]
-    )
-  ])
+  return _c(
+    "div",
+    { attrs: { id: "home" } },
+    [
+      _c(
+        "span",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.cafesLoadStatus == 1,
+              expression: "cafesLoadStatus == 1"
+            }
+          ]
+        },
+        [_vm._v("Loading")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.cafesLoadStatus == 2,
+              expression: "cafesLoadStatus == 2"
+            }
+          ]
+        },
+        [_vm._v("Cafes loaded successfully!")]
+      ),
+      _vm._v(" "),
+      _c(
+        "span",
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.cafesLoadStatus == 3,
+              expression: "cafesLoadStatus == 3"
+            }
+          ]
+        },
+        [_vm._v("Cafes loaded unsuccessfully!")]
+      ),
+      _vm._v(" "),
+      _vm._l(_vm.cafes, function(cafe, key) {
+        return _c(
+          "ul",
+          [
+            _c(
+              "router-link",
+              { attrs: { to: { name: "cafe", params: { id: cafe.id } } } },
+              [_vm._v(_vm._s(cafe.name))]
+            )
+          ],
+          1
+        )
+      })
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -57778,12 +57784,6 @@ exports.push([module.i, "\ndiv.loader {\n  margin: auto;\n  vertical-align: midd
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
 //
 //
 //
