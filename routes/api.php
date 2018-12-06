@@ -63,4 +63,10 @@ Route::group(['prefix' => 'v1'], function () {
     */
     Route::get('/brew-methods', 'API\BrewMethodsController@getBrewMethods');
 
+    // 喜欢咖啡店
+    Route::post('/cafes/{id}/like', 'API\CafesController@postLikeCafe');
+
+    // 取消喜欢咖啡店
+    Route::delete('/cafes/{id}/like', 'API\CafesController@deleteLikeCafe');
+
 });
