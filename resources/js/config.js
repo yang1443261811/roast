@@ -2,7 +2,8 @@
  * Defines the API route we are using.
  */
 var api_url = '';
-
+var app_url = '';
+var gaode_maps_js_api_key = 'd55568194002d81b93289a24900e86cb';
 switch (process.env.NODE_ENV) {
     case 'development':
         api_url = 'http://roast.test/api/v1';
@@ -14,4 +15,6 @@ switch (process.env.NODE_ENV) {
 
 export const ROAST_CONFIG = {
     API_URL: api_url,
+    APP_URL: app_url,
+    GAODE_MAPS_JS_API_KEY: gaode_maps_js_api_key
 }
